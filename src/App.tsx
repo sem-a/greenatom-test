@@ -24,7 +24,7 @@ function App() {
           console.error(error);
           setError(error.message);
         } else {
-          setError('Возникла неизвестная ошибка!')
+          setError("Возникла неизвестная ошибка!");
         }
       } finally {
         setLoading(false);
@@ -35,12 +35,23 @@ function App() {
   }, []);
 
   if (loading) return <Loading />;
-  if (error) return <Container><Error message={error} /></Container>;
+  if (error)
+    return (
+      <Container>
+        <Error message={error} />
+      </Container>
+    );
 
   return (
     <>
       <Container>
-        <Table dataSource={users} columns={columns} rowKey="id" />
+        <Table
+          dataSource={users}
+          columns={columns}
+          rowKey="id"
+          pagination={{ pageSize: 5 }}
+          scroll={{ x: 955 }}
+        />
       </Container>
     </>
   );
