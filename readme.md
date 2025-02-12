@@ -31,26 +31,18 @@
 2. Клонируйте репозиторий:
    
 ```
-   git clone https://github.com/username/repo-name.git
+   git clone https://github.com/sem-a/greenatom-test.git
 ```
 3. Перейдите в директорию проекта:
 ```
-   cd repo-name
+   cd greenatom-test
 ```
 4. Установите зависимости:
-```
-   npm install
-```
-   или
 ```
    yarn install
 ```
 
 5. Запустите приложение:
-```
-   npm start
-```
-   или
 ```
    yarn start
 ```
